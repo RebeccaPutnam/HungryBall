@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &366392913 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6924680676179047964, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
+  m_PrefabInstance: {fileID: 585598077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &485836553
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +139,7 @@ GameObject:
   - component: {fileID: 485836556}
   - component: {fileID: 485836555}
   - component: {fileID: 485836554}
+  - component: {fileID: 485836557}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -206,6 +212,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &485836557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485836553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563f7d9b58700476b852e319693b6280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 366392913}
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  distance: 10
+  minPitch: -80
+  maxPitch: 80
+  rotationSpeed: 300
 --- !u!1001 &585598077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213,6 +239,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1145377564759281648, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
+      propertyPath: ballCamera
+      value: 
+      objectReference: {fileID: 485836556}
     - target: {fileID: 4399730250591210461, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
       propertyPath: m_Name
       value: Player
