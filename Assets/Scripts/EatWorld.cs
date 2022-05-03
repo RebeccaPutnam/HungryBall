@@ -6,7 +6,7 @@ public class EatWorld : MonoBehaviour
 {
         public float speed;
         private Rigidbody2D rb;
-        private GameObject carrot;
+        private GameObject tree;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,21 +27,21 @@ public class EatWorld : MonoBehaviour
     {
 
         justBall ballScript = other.GetComponent<justBall>();
-        if (ballScript != null && carrot != null)
+        if (ballScript != null && tree != null)
         {
             ballScript.Feed();
-            Destroy(carrot);
-            carrot = null; //create universal tag for objects in world that Herb will eat
+            Destroy(tree);
+            tree = null; //create universal tag for objects in world that Herb will eat
             
         }
 
-        if (other.CompareTag("Carrot")) //instead of "carrot," use our tag..
+        if (other.CompareTag("tree")) //instead of "carrot," use our tag..
         {
-            if (carrot == null)
+            if (tree == null)
             {
-                carrot = other.gameObject;
-                carrot.transform.SetParent(transform);
-                carrot.transform.localPosition = new Vector3(0.5f, 0.0f, 0.0f);
+                tree = other.gameObject;
+                tree.transform.SetParent(transform);
+                tree.transform.localPosition = new Vector3(0.5f, 0.0f, 0.0f);
             }
             
         }
