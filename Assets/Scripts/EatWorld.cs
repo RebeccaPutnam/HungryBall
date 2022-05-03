@@ -10,8 +10,6 @@ public class EatWorld : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -28,24 +26,24 @@ public class EatWorld : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        Animal animalScript = other.GetComponent<Animal>();
-        if (animalScript != null && carrot != null)
+        justBall ballScript = other.GetComponent<justBall>();
+        if (ballScript != null && carrot != null)
         {
-            animalScript.Feed();
+            ballScript.Feed();
             Destroy(carrot);
             carrot = null; //create universal tag for objects in world that Herb will eat
             
         }
 
         if (other.CompareTag("Carrot")) //instead of "carrot," use our tag..
+        {
+            if (carrot == null)
             {
-                if (carrot == null)
-                {
                 carrot = other.gameObject;
                 carrot.transform.SetParent(transform);
                 carrot.transform.localPosition = new Vector3(0.5f, 0.0f, 0.0f);
-                }
             }
+            
         }
     }
 }
