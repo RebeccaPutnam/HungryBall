@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class EatWorld : MonoBehaviour
 {
+        public float speed;
+        private Rigidbody2D rb;
+        private GameObject carrot;
     // Start is called before the first frame update
     void Start()
     {
         
+
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
