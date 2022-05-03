@@ -23,7 +23,7 @@ public class EatWorld : MonoBehaviour
         transform.position += new Vector3(inputX, inputY, 0) * Time.deltaTime * speed;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other) //NEED TO CHANGE THIS TO 3D!!!!
     {
 
         justBall ballScript = other.GetComponent<justBall>();
