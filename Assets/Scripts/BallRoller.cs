@@ -12,9 +12,7 @@ public class BallRoller : MonoBehaviour
 
     public Transform ballCamera;
 
-    public Text countText;
-    public Text winText;
-    public float targetTime = 10.0f;
+    public Text TimerText;
 
     void Start()
     {
@@ -33,8 +31,6 @@ public class BallRoller : MonoBehaviour
         Vector3 zAcceleration = ballCamera.forward * moveForwardBack * Time.deltaTime * acceleration;
 
         rb.velocity += xAcceleration + zAcceleration;
-
-        targetTime -= Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -44,7 +40,9 @@ public class BallRoller : MonoBehaviour
                 food = other.gameObject;
                 Destroy(food);
                 transform.localScale *= 1.1f;
+                acceleration -= 0.1f;
                 counter++;
+                TimerText.text = string.Format("{0}", counter);
             }
 
             if (other.CompareTag("Smaller") && counter >= 1)
@@ -52,21 +50,27 @@ public class BallRoller : MonoBehaviour
                 food = other.gameObject;
                 Destroy(food);
                 transform.localScale *= 1.1f;
+                acceleration -= 0.1f;
                 counter++;
-            }
+                TimerText.text = string.Format("{0}", counter);
+        }
             if (other.CompareTag("Small") && counter >= 2)
             {
                 food = other.gameObject;
                 Destroy(food);
                 transform.localScale *= 1.1f;
+                acceleration -= 0.1f;
                 counter++;
-            }
+                TimerText.text = string.Format("{0}", counter);
+            }  
             if (other.CompareTag("Medium") && counter >= 3)
             {
                 food = other.gameObject;
                 Destroy(food);
                 transform.localScale *= 1.1f;
+                acceleration -= 0.1f;
                 counter++;
+                TimerText.text = string.Format("{0}", counter);
             }
         }
 
