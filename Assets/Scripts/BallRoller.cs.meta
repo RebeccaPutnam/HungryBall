@@ -3,7 +3,10 @@ guid: f833489bcc764467bbe452c3ed3e7792
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ballCamera: {instanceID: 0}
+  - TimerText: {instanceID: 0}
+  - eatsound: {fileID: 8300000, guid: 918303e64e4a74eb6b8f61ada687e377, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

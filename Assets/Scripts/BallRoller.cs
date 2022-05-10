@@ -14,9 +14,14 @@ public class BallRoller : MonoBehaviour
 
     public Text TimerText;
 
+    public AudioClip eatsound;
+
+    private AudioSource audioSource;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -39,6 +44,7 @@ public class BallRoller : MonoBehaviour
             {
                 food = other.gameObject;
                 Destroy(food);
+                audioSource.PlayOneShot(eatsound);
                 counter++;
                 TimerText.text = string.Format("{0}", counter);
                 if (counter == 2)
