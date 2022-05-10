@@ -39,13 +39,16 @@ public class BallRoller : MonoBehaviour
             {
                 food = other.gameObject;
                 Destroy(food);
-                transform.localScale *= 1.1f;
-                acceleration -= 0.1f;
                 counter++;
                 TimerText.text = string.Format("{0}", counter);
+                if (counter == 2)
+                {
+                    transform.localScale *= 1.1f;
+                    acceleration -= 0.1f;
+                } 
             }
 
-            if (other.CompareTag("Smaller") && counter >= 1)
+            if (other.CompareTag("Smaller") && counter >= 2)
             {
                 food = other.gameObject;
                 Destroy(food);
@@ -54,7 +57,7 @@ public class BallRoller : MonoBehaviour
                 counter++;
                 TimerText.text = string.Format("{0}", counter);
         }
-            if (other.CompareTag("Small") && counter >= 2)
+            if (other.CompareTag("Small") && counter >= 3)
             {
                 food = other.gameObject;
                 Destroy(food);
@@ -63,7 +66,7 @@ public class BallRoller : MonoBehaviour
                 counter++;
                 TimerText.text = string.Format("{0}", counter);
             }  
-            if (other.CompareTag("Medium") && counter >= 3)
+            if (other.CompareTag("Medium") && counter >= 4)
             {
                 food = other.gameObject;
                 Destroy(food);
