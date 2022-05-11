@@ -7,6 +7,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2466988968850790525, guid: fda1b03ba40107b42aa57c49305b41f7, type: 3}
+      propertyPath: m_Size.x
+      value: 0.92651856
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466988968850790525, guid: fda1b03ba40107b42aa57c49305b41f7, type: 3}
+      propertyPath: m_Size.y
+      value: 5.143377
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466988968850790525, guid: fda1b03ba40107b42aa57c49305b41f7, type: 3}
+      propertyPath: m_Size.z
+      value: 0.85098904
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466988968850790525, guid: fda1b03ba40107b42aa57c49305b41f7, type: 3}
+      propertyPath: m_Center.x
+      value: 0.06841842
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466988968850790525, guid: fda1b03ba40107b42aa57c49305b41f7, type: 3}
+      propertyPath: m_Center.y
+      value: 2.5631466
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466988968850790525, guid: fda1b03ba40107b42aa57c49305b41f7, type: 3}
+      propertyPath: m_Center.z
+      value: -0.023141438
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466988968850790525, guid: fda1b03ba40107b42aa57c49305b41f7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2717421105183063956, guid: fda1b03ba40107b42aa57c49305b41f7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -66,6 +94,10 @@ PrefabInstance:
     - target: {fileID: 3386118356341204270, guid: fda1b03ba40107b42aa57c49305b41f7, type: 3}
       propertyPath: m_Name
       value: bigger stick tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386118356341204270, guid: fda1b03ba40107b42aa57c49305b41f7, type: 3}
+      propertyPath: m_TagString
+      value: Bigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda1b03ba40107b42aa57c49305b41f7, type: 3}

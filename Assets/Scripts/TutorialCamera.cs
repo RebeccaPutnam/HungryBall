@@ -1,13 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class CameraController : MonoBehaviour
+public class TutorialCamera : MonoBehaviour
 {
     public Transform target;
 
     public LayerMask obstacleLayerMask;
 
-    private float distance = 1;
+    private float distance = 5;
     public float minPitch = -80;
     public float maxPitch = 80;
 
@@ -44,7 +44,7 @@ public class CameraController : MonoBehaviour
 
         if (target.localScale != targetSize)
         {
-            distance += 0.5f;
+            distance += 1;
             targetSize = target.localScale;
         }
     }

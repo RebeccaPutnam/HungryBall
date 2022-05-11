@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class BallRoller : MonoBehaviour
+public class TutorialBallRoller : MonoBehaviour
 {
 
     public float acceleration = 10;
@@ -44,27 +44,18 @@ public class BallRoller : MonoBehaviour
         {
             EatFood(other);
         }
+
         if (other.CompareTag("Smaller") && counter >= 5)
         {
             EatFood(other);
         }
-        if (other.CompareTag("Small") && counter >= 10)
-        {
-            EatFood(other);
-        }
+
         if (other.CompareTag("Medium") && counter >= 15)
         {
             EatFood(other);
         }
-        if (other.CompareTag("Big") && counter >= 20)
-        {
-            EatFood(other);
-        }
-        if (other.CompareTag("Bigger") && counter >= 25)
-        {
-            EatFood(other);
-        }
-        if (other.CompareTag("Biggest") && counter >= 30)
+
+        if (other.CompareTag("Big") && counter >= 30)
         {
             EatFood(other);
         }
@@ -76,12 +67,13 @@ public class BallRoller : MonoBehaviour
         Destroy(food);
         audioSource.PlayOneShot(eatsound);
         counter++;
-        TimerText.text = string.Format("{0}", counter);
-        if (counter == 5 || counter == 10 || counter == 15 || counter == 20 || counter == 25 || counter ==30)
+        TimerText.text = string.Format("{0} / 40", counter);
+        if (counter == 5 || counter == 15 || counter == 30)
         {
-            transform.localScale *= 1.1f;
+            transform.localScale *= 1.5f;
             acceleration -= 0.1f;
         }
+
     }
 
 }

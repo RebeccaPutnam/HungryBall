@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bigger winter tree
       objectReference: {fileID: 0}
+    - target: {fileID: 1395144512976339487, guid: 787481964fc05da4684124e8aaa924ee, type: 3}
+      propertyPath: m_TagString
+      value: Bigger
+      objectReference: {fileID: 0}
     - target: {fileID: 1735957501414348965, guid: 787481964fc05da4684124e8aaa924ee, type: 3}
       propertyPath: m_RootOrder
       value: 0

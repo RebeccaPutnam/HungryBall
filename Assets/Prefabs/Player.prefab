@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f833489bcc764467bbe452c3ed3e7792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 10
+  acceleration: 8
   ballCamera: {fileID: 0}
   TimerText: {fileID: 0}
   eatsound: {fileID: 0}
