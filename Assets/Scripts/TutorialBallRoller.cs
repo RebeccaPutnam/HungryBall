@@ -50,7 +50,7 @@ public class TutorialBallRoller : MonoBehaviour
             EatFood(other);
         }
 
-        if (other.CompareTag("Medium") && counter >= 15)
+        if (other.CompareTag("Medium") && counter >= 20)
         {
             EatFood(other);
         }
@@ -68,7 +68,7 @@ public class TutorialBallRoller : MonoBehaviour
         audioSource.PlayOneShot(eatsound);
         counter++;
         TimerText.text = string.Format("{0} / 40", counter);
-        if (counter == 5 || counter == 15 || counter == 30)
+        if (counter == 5 || counter == 20 || counter == 30)
         {
             transform.localScale *= 1.5f;
             acceleration -= 0.1f;
