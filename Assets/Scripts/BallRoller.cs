@@ -43,9 +43,11 @@ public class BallRoller : MonoBehaviour
             if (other.CompareTag("Smallest"))
             {
                 food = other.gameObject;
-                Destroy(food);
-                audioSource.PlayOneShot(eatsound);
-                counter++;
+            
+            Destroy(food);
+            audioSource.PlayOneShot(eatsound);
+
+            counter++;
                 TimerText.text = string.Format("{0}", counter);
                 if (counter == 2)
                 {
