@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
 
     public LayerMask obstacleLayerMask;
 
-    private float distance = 10;
+    private float distance = 3;
     public float minPitch = -80;
     public float maxPitch = 80;
 
@@ -15,11 +15,13 @@ public class CameraController : MonoBehaviour
 
     private float pitch;
     private float yaw;
+    private Vector3 targetSize;
 
     void Start()
     {
         pitch = 45;
         yaw = 0;
+        targetSize = target.localScale;
     }
 
     void Update()
@@ -39,6 +41,12 @@ public class CameraController : MonoBehaviour
 
         transform.position = target.position + offset * distance;
         transform.rotation = Quaternion.LookRotation(-offset, Vector3.up);
+
+        if (target.localScale != targetSize)
+        {
+            distance += 1;
+            targetSize = target.localScale;
+        }
     }
 
 }
