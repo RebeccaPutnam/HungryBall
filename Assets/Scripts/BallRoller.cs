@@ -76,12 +76,18 @@ public class BallRoller : MonoBehaviour
         Destroy(food);
         audioSource.PlayOneShot(eatsound);
         counter++;
-        TimerText.text = string.Format("{0}", counter);
+        TimerText.text = string.Format("{0} / 40", counter);
         if (counter == 5 || counter == 10 || counter == 15 || counter == 20 || counter == 25 || counter ==30)
         {
             transform.localScale *= 1.1f;
             acceleration -= 0.1f;
         }
+    }
+
+    public int FinalCount()
+    {
+        int finalCount = counter;
+        return finalCount;
     }
 
 }
