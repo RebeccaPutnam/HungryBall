@@ -42,49 +42,73 @@ public class BallRoller : MonoBehaviour
         {
             if (other.CompareTag("Smallest"))
             {
-                food = other.gameObject;
-                Destroy(food);
-                audioSource.PlayOneShot(eatsound);
+                EatFood(other);
 
-            counter++;
-                TimerText.text = string.Format("{0}", counter);
-                if (counter == 2)
+                if (counter == 5)
                 {
-                    transform.localScale *= 1.1f;
-                    acceleration -= 0.1f;
+                    GrowPlayer();
                 } 
             }
 
-            if (other.CompareTag("Smaller") && counter >= 2)
+            if (other.CompareTag("Smaller") && counter >= 5)
             {
-                food = other.gameObject;
-                Destroy(food);
-                audioSource.PlayOneShot(eatsound);
-                transform.localScale *= 1.1f;
-                acceleration -= 0.1f;
-                counter++;
-                TimerText.text = string.Format("{0}", counter);
-        }
-            if (other.CompareTag("Small") && counter >= 3)
-            {
-                food = other.gameObject;
-                Destroy(food);
-                audioSource.PlayOneShot(eatsound);
-                transform.localScale *= 1.1f;
-                acceleration -= 0.1f;
-                counter++;
-                TimerText.text = string.Format("{0}", counter);
-            }  
-            if (other.CompareTag("Medium") && counter >= 4)
-            {
-                food = other.gameObject;
-                Destroy(food);
-                audioSource.PlayOneShot(eatsound);
-                transform.localScale *= 1.1f;
-                acceleration -= 0.1f;
-                counter++;
-                TimerText.text = string.Format("{0}", counter);
+                EatFood(other);
+                if (counter == 10)
+                {
+                    GrowPlayer();
+                }
             }
-        }
+            if (other.CompareTag("Small") && counter >= 10)
+            {
+                EatFood(other);
+                if (counter == 15)
+                {
+                    GrowPlayer();
+                }
+            }  
+            if (other.CompareTag("Medium") && counter >= 15)
+            {
+                EatFood(other);
+                if (counter == 20)
+                {
+                    GrowPlayer();
+                }
+            }
+            if (other.CompareTag("Big") && counter >= 20)
+            {
+                EatFood(other);
+                if (counter == 25)
+                {
+                    GrowPlayer();
+                }
+            }
+            if (other.CompareTag("Bigger") && counter >= 25)
+            {
+                EatFood(other);
+                if (counter == 30)
+                {
+                    GrowPlayer();
+                }
+            }
+            if (other.CompareTag("Medium") && counter >= 30)
+            {
+                EatFood(other);
+            }
+    }
+
+    void EatFood(Collider other)
+    {
+        food = other.gameObject;
+        Destroy(food);
+        audioSource.PlayOneShot(eatsound);
+        counter++;
+        TimerText.text = string.Format("{0}", counter);
+    }
+
+    void GrowPlayer()
+    {
+        transform.localScale *= 1.1f;
+        acceleration -= 0.1f;
+    }
 
     }

@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
 
     public LayerMask obstacleLayerMask;
 
-    private float distance = 3;
+    private float distance = 1;
     public float minPitch = -80;
     public float maxPitch = 80;
 
