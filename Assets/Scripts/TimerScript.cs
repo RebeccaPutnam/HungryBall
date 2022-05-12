@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerScript : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class TimerScript : MonoBehaviour
                 Debug.Log("Time is up");
                 TimeLeft = 0;
                 TimerOn = false;
+                SceneManager.LoadScene(5);
             }
         }
     }
