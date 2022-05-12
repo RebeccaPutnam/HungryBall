@@ -591,7 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1378218020}
-  TimeLeft: 10
+  TimeLeft: 66
   TimerOn: 0
   TimerText: {fileID: 2004735672}
 --- !u!1 &262098418 stripped
@@ -1735,20 +1735,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 600491ce39e51af4e88e958fad3f21d1, type: 3}
   m_PrefabInstance: {fileID: 717279252}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &717279254
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717279253}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &717279255
 Rigidbody:
   m_ObjectHideFlags: 0
