@@ -9,6 +9,8 @@ public class BallRoller : MonoBehaviour
     private GameObject food;
     private Rigidbody rb;
     private int counter;
+    public int finalCount;
+    public int highScore;
 
     public Transform ballCamera;
 
@@ -22,6 +24,8 @@ public class BallRoller : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+
+        highScore = PlayerPrefs.GetInt("HighScore");
     }
 
     void Update()
@@ -86,8 +90,17 @@ public class BallRoller : MonoBehaviour
 
     public int FinalCount()
     {
-        int finalCount = counter;
+        finalCount = counter;
         return finalCount;
+    }
+
+    public void UpdateHighScore()
+    {
+        if (counter >= highScore)
+        {
+            highScore = counter;
+            PlayerPrefs.GetInt("HighScore", highScore);
+        }
     }
 
 }

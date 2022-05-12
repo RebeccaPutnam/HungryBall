@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class TimerScript : MonoBehaviour
+public class TutorialTimer : MonoBehaviour
 {
-    public BallRoller player;
+    public TutorialBallRoller player;
 
     public float TimeLeft;
     public bool TimerOn = false;
@@ -34,7 +34,6 @@ public class TimerScript : MonoBehaviour
             {
                 player.FinalCount();
                 player.UpdateHighScore();
-                Debug.Log("Time is up");
                 TimeLeft = 0;
                 TimerOn = false;
                 SceneManager.LoadScene(5);
@@ -42,7 +41,7 @@ public class TimerScript : MonoBehaviour
         }
     }
 
-    void updateTimer (float currentTime)
+    void updateTimer(float currentTime)
     {
         currentTime += 1;
 

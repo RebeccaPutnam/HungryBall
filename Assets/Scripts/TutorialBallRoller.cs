@@ -18,6 +18,9 @@ public class TutorialBallRoller : MonoBehaviour
 
     private AudioSource audioSource;
 
+    public int finalCount;
+    public int highScore;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -74,6 +77,21 @@ public class TutorialBallRoller : MonoBehaviour
             acceleration -= 0.1f;
         }
 
+    }
+
+    public void FinalCount()
+    {
+        finalCount = counter;
+        PlayerPrefs.GetInt("Score", finalCount);
+    }
+
+    public void UpdateHighScore()
+    {
+        if (counter >= highScore)
+        {
+            highScore = counter;
+            PlayerPrefs.GetInt("HighScore", highScore);
+        }
     }
 
 }

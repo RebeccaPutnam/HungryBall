@@ -495,8 +495,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7243280607889585748, guid: 7c51b7a159a324968977a4554ccc6db0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7c51b7a159a324968977a4554ccc6db0, type: 3}
+--- !u!1 &257752954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7243280607889585749, guid: 7c51b7a159a324968977a4554ccc6db0, type: 3}
+  m_PrefabInstance: {fileID: 257752953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &257752955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257752954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8eb9e0633298439192e7dd2d975db87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1378218020}
+  TimeLeft: 10
+  TimerOn: 0
+  TimerText: {fileID: 2004735672}
 --- !u!1 &262098418 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2229492743333010427, guid: 9c2e89039c24beb4a89d978db6c83c19, type: 3}
@@ -3149,6 +3171,8 @@ MonoBehaviour:
   ballCamera: {fileID: 485836556}
   TimerText: {fileID: 1015905691}
   eatsound: {fileID: 8300000, guid: 918303e64e4a74eb6b8f61ada687e377, type: 3}
+  finalCount: 0
+  highScore: 0
 --- !u!82 &1378218021
 AudioSource:
   m_ObjectHideFlags: 0

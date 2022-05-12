@@ -5,21 +5,20 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 { 
-    public Text yourScore;
+    public Text score;
     public Text highScore;
 
-    private int hScore;
-    private int yScore;
-
-    public BallRoller player;
-
-    private int score;
+    private int highScoreInt;
+    private int scoreInt;
 
     // Start is called before the first frame update
     void Start()
     {
-        yScore = player.FinalCount();
-        yourScore.text = string.Format("{0}", yScore);
+        highScoreInt = PlayerPrefs.GetInt("HighScore");
+        highScore.text = string.Format("High Score: {0}", highScoreInt);
+        scoreInt = PlayerPrefs.GetInt("Score");
+        score.text = string.Format("Your Score: {0}", scoreInt);
+
     }
 
     // Update is called once per frame
