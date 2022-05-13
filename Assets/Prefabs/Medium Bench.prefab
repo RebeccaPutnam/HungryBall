@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5091836126924578664}
   - component: {fileID: 7393361052066528122}
   m_Layer: 0
-  m_Name: Bench
-  m_TagString: Untagged
+  m_Name: Medium Bench
+  m_TagString: Medium
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
