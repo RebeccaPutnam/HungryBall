@@ -86,7 +86,7 @@ public class BallRoller : MonoBehaviour
         FoodCount.text = string.Format("{0} / 65", counter);
         if (counter == 5 || counter == 10 || counter == 15 || counter == 20 || counter == 25 || counter ==30)
         {
-            transform.localScale *= 1.1f;
+            transform.localScale *= 1.2f;
             acceleration -= 0.1f;
         }
     }
