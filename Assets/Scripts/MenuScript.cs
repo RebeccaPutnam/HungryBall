@@ -21,9 +21,9 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene(random);
     }
 
-    public void LoadTutorial(int integer)
+    public void LoadInstructions()
     {
-        SceneManager.LoadScene(integer);
+        SceneManager.LoadScene(6);
     }
 
     public void QuitGame()
