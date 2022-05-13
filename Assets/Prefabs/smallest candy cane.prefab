@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4399730250591210461
+--- !u!1 &2366425581025712466
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6924680676179047964}
-  - component: {fileID: 2645606087666182800}
-  - component: {fileID: 1550662503174570734}
-  - component: {fileID: 2932918704344456489}
-  - component: {fileID: -1145377564759281648}
-  - component: {fileID: 342018711505855970}
+  - component: {fileID: 2366425581025281394}
+  - component: {fileID: 2366425581024478546}
+  - component: {fileID: 2366425581023512466}
+  - component: {fileID: 2366425581019428850}
+  - component: {fileID: 8945981557251188943}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
+  m_Name: smallest candy cane
+  m_TagString: Smallest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6924680676179047964
+--- !u!4 &2366425581025281394
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399730250591210461}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_GameObject: {fileID: 2366425581025712466}
+  m_LocalRotation: {x: 0.19490501, y: -0.34281215, z: -0.6797147, w: 0.61844957}
+  m_LocalPosition: {x: -14.641256, y: -0.9817935, z: -0.665051}
+  m_LocalScale: {x: 80, y: 80, z: 80}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2645606087666182800
+  m_LocalEulerAnglesHint: {x: -13, y: -45, z: -90}
+--- !u!33 &2366425581024478546
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399730250591210461}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1550662503174570734
+  m_GameObject: {fileID: 2366425581025712466}
+  m_Mesh: {fileID: 4300002, guid: efcd52218922fb9429b59ee5f134a847, type: 3}
+--- !u!23 &2366425581023512466
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399730250591210461}
+  m_GameObject: {fileID: 2366425581025712466}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2617ad1e9cb0747f48b94883e163e1e0, type: 2}
+  - {fileID: 2100000, guid: 5c297b7c6148e944a91e278c781ebc14, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,48 +83,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2932918704344456489
-SphereCollider:
+--- !u!64 &2366425581019428850
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399730250591210461}
+  m_GameObject: {fileID: 2366425581025712466}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-1145377564759281648
-MonoBehaviour:
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: efcd52218922fb9429b59ee5f134a847, type: 3}
+--- !u!65 &8945981557251188943
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399730250591210461}
+  m_GameObject: {fileID: 2366425581025712466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f833489bcc764467bbe452c3ed3e7792, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 8
-  ballCamera: {fileID: 0}
-  FoodCount: {fileID: 0}
-  eatsound: {fileID: 0}
---- !u!54 &342018711505855970
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399730250591210461}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Size: {x: 0.0004988966, y: 0.0017023575, z: 0.0050922367}
+  m_Center: {x: -0.0000000037161412, y: -0.00060173054, z: 0.002579373}

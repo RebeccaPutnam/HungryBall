@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/FallLevel.unity
     guid: d1a33d547afd34f9b8e3f7fc37e0c65d
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
+    path: Assets/Scenes/WinterGameOver.unity
     guid: a588ecfb84c474c76af647010dd788f4
   - enabled: 1
     path: Assets/Scenes/Instructions.unity
@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PostTutorial.unity
     guid: e5307a07e5e924e1381e0dbafc73c87f
+  - enabled: 1
+    path: Assets/Scenes/FallGameOver.unity
+    guid: 34528214f63764765b04a2d098f27999
+  - enabled: 1
+    path: Assets/Scenes/SummerGameOver.unity
+    guid: 124d37ca7ddeb4d2599de2d5cde02323
   m_configObjects: {}

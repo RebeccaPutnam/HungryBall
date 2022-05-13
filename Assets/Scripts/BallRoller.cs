@@ -26,18 +26,7 @@ public class BallRoller : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
 
-        /*if (SceneManager.GetActiveScene().name == "WinterLevel")
-        {
-            highScore = PlayerPrefs.GetInt("WinterHighScore");
-        }
-        if (SceneManager.GetActiveScene().name == "SummerLevel")
-        {
-            highScore = PlayerPrefs.GetInt("SummerHighScore");
-        }
-        if (SceneManager.GetActiveScene().name == "FallLevel")
-        {
-            highScore = PlayerPrefs.GetInt("FallHighScore");
-        }*/
+        
         highScore = PlayerPrefs.GetInt("HighScore");
 
     }
@@ -70,19 +59,19 @@ public class BallRoller : MonoBehaviour
         {
             EatFood(other);
         }
-        if (other.CompareTag("Medium") && counter >= 15)
+        if (other.CompareTag("Medium") && counter >= 18)
         {
             EatFood(other);
         }
-        if (other.CompareTag("Big") && counter >= 20)
+        if (other.CompareTag("Big") && counter >= 25)
         {
             EatFood(other);
         }
-        if (other.CompareTag("Bigger") && counter >= 25)
+        if (other.CompareTag("Bigger") && counter >= 35)
         {
             EatFood(other);
         }
-        if (other.CompareTag("Biggest") && counter >= 30)
+        if (other.CompareTag("Biggest") && counter >= 48)
         {
             EatFood(other);
         }
@@ -110,10 +99,32 @@ public class BallRoller : MonoBehaviour
 
     public void UpdateHighScore()
     {
-        if (counter >= highScore)
+        if (SceneManager.GetActiveScene().name == "WinterLevel")
         {
-            highScore = counter;
-            PlayerPrefs.SetInt("HighScore", highScore);
+            highScore = PlayerPrefs.GetInt("WinterHighScore");
+            if (counter >= highScore)
+            {
+                highScore = counter;
+                PlayerPrefs.SetInt("WinterHighScore", highScore);
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "SummerLevel")
+        {
+            highScore = PlayerPrefs.GetInt("SummerHighScore");
+            if (counter >= highScore)
+            {
+                highScore = counter;
+                PlayerPrefs.SetInt("SummerHighScore", highScore);
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "FallLevel")
+        {
+            highScore = PlayerPrefs.GetInt("FallHighScore");
+            if (counter >= highScore)
+            {
+                highScore = counter;
+                PlayerPrefs.SetInt("FallHighScore", highScore);
+            }
         }
     }
 

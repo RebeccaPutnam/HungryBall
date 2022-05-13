@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Score : MonoBehaviour
-{ 
+public class WinterScore : MonoBehaviour
+{
     public Text score;
     public Text highScore;
 
@@ -14,8 +14,8 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        highScoreInt = PlayerPrefs.GetInt("HighScore");
-        highScore.text = string.Format("High Score: {0}", highScoreInt);
+        highScoreInt = PlayerPrefs.GetInt("WinterHighScore");
+        highScore.text = string.Format("Winter High Score: {0}", highScoreInt);
         scoreInt = PlayerPrefs.GetInt("Score");
         score.text = string.Format("Your Score: {0}", scoreInt);
 
@@ -24,6 +24,6 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

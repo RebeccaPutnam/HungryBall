@@ -36,7 +36,19 @@ public class TimerScript : MonoBehaviour
                 player.UpdateHighScore();
                 TimeLeft = 0;
                 TimerOn = false;
-                SceneManager.LoadScene(5);
+                if (SceneManager.GetActiveScene().name == "WinterLevel")
+                {
+                    SceneManager.LoadScene(5);
+                }
+                if (SceneManager.GetActiveScene().name == "SummerLevel")
+                {
+                    SceneManager.LoadScene(9);
+                }
+                if (SceneManager.GetActiveScene().name == "FallLevel")
+                {
+                    SceneManager.LoadScene(8);
+                }
+                
             }
         }
     }
