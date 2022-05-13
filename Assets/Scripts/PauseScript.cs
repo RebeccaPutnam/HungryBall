@@ -28,9 +28,11 @@ public class PauseScript : MonoBehaviour
 
     public void Resume()
     {
+        Debug.Log("resuming game..");
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        
     }
 
     void Pause()
@@ -42,6 +44,7 @@ public class PauseScript : MonoBehaviour
 
     public void LoadMenu()
     {
+        Debug.Log("loading menu..");
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
