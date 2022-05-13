@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BallRoller : MonoBehaviour
 {
@@ -9,12 +10,12 @@ public class BallRoller : MonoBehaviour
     private GameObject food;
     private Rigidbody rb;
     private int counter;
-    public int finalCount;
-    public int highScore;
+    private int finalCount;
+    private int highScore = 0;
 
     public Transform ballCamera;
 
-    public Text TimerText;
+    public Text FoodCount;
 
     public AudioClip eatsound;
 
@@ -25,7 +26,20 @@ public class BallRoller : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
 
+        /*if (SceneManager.GetActiveScene().name == "WinterLevel")
+        {
+            highScore = PlayerPrefs.GetInt("WinterHighScore");
+        }
+        if (SceneManager.GetActiveScene().name == "SummerLevel")
+        {
+            highScore = PlayerPrefs.GetInt("SummerHighScore");
+        }
+        if (SceneManager.GetActiveScene().name == "FallLevel")
+        {
+            highScore = PlayerPrefs.GetInt("FallHighScore");
+        }*/
         highScore = PlayerPrefs.GetInt("HighScore");
+
     }
 
     void Update()
@@ -80,7 +94,7 @@ public class BallRoller : MonoBehaviour
         Destroy(food);
         audioSource.PlayOneShot(eatsound);
         counter++;
-        TimerText.text = string.Format("{0} / 40", counter);
+        FoodCount.text = string.Format("{0} / 65", counter);
         if (counter == 5 || counter == 10 || counter == 15 || counter == 20 || counter == 25 || counter ==30)
         {
             transform.localScale *= 1.1f;
@@ -88,10 +102,10 @@ public class BallRoller : MonoBehaviour
         }
     }
 
-    public int FinalCount()
+    public void FinalCount()
     {
         finalCount = counter;
-        return finalCount;
+        PlayerPrefs.SetInt("Score", finalCount);
     }
 
     public void UpdateHighScore()
@@ -99,7 +113,7 @@ public class BallRoller : MonoBehaviour
         if (counter >= highScore)
         {
             highScore = counter;
-            PlayerPrefs.GetInt("HighScore", highScore);
+            PlayerPrefs.SetInt("HighScore", highScore);
         }
     }
 

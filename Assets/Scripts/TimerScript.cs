@@ -34,7 +34,6 @@ public class TimerScript : MonoBehaviour
             {
                 player.FinalCount();
                 player.UpdateHighScore();
-                Debug.Log("Time is up");
                 TimeLeft = 0;
                 TimerOn = false;
                 SceneManager.LoadScene(5);

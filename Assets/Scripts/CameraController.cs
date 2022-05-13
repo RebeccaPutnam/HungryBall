@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
 
     public LayerMask obstacleLayerMask;
 
-    private float distance = 5;
+    public float distance = 2;
     public float minPitch = -80;
     public float maxPitch = 80;
 
@@ -26,14 +26,14 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        float pitchInput = Input.GetAxisRaw("Mouse Y");
-        pitch += pitchInput * Time.deltaTime * rotationSpeed;
+        /*float pitchInput = Input.GetAxisRaw("Mouse Y");
+        pitch += pitchInput * Time.deltaTime * rotationSpeed;*/
         pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
         Quaternion pitchRotation = Quaternion.AngleAxis(pitch, Vector3.right);
 
 
-        float yawInput = Input.GetAxisRaw("Mouse X");
-        yaw += yawInput * Time.deltaTime * rotationSpeed;
+        /*float yawInput = Input.GetAxisRaw("Mouse X");
+        yaw += yawInput * Time.deltaTime * rotationSpeed;*/
         Quaternion yawRotation = Quaternion.AngleAxis(yaw, Vector3.up);
 
         Vector3 offset = new Vector3(0, 1, -1);

@@ -1421,6 +1421,7 @@ MonoBehaviour:
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 0
+  distance: 2
   minPitch: -80
   maxPitch: 80
   rotationSpeed: 300
@@ -3460,6 +3461,10 @@ PrefabInstance:
       propertyPath: eatsound
       value: 
       objectReference: {fileID: 8300000, guid: 918303e64e4a74eb6b8f61ada687e377, type: 3}
+    - target: {fileID: -1145377564759281648, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
+      propertyPath: FoodCount
+      value: 
+      objectReference: {fileID: 794782013}
     - target: {fileID: -1145377564759281648, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
       propertyPath: TimerText
       value: 
@@ -5634,6 +5639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clock UI
       objectReference: {fileID: 0}
+    - target: {fileID: 2765774693318389410, guid: e66a0d08ecd4d4fe7807b78b5b048b6b, type: 3}
+      propertyPath: m_Text
+      value: '0 / 65 '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e66a0d08ecd4d4fe7807b78b5b048b6b, type: 3}
 --- !u!1001 &4769079231328737917
@@ -5822,6 +5831,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1537095724}
+    - target: {fileID: 7243280607889585748, guid: 7c51b7a159a324968977a4554ccc6db0, type: 3}
+      propertyPath: TimeLeft
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7243280607889585748, guid: 7c51b7a159a324968977a4554ccc6db0, type: 3}
       propertyPath: TimerText
       value: 

@@ -1051,6 +1051,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 446478778}
     - target: {fileID: 7243280607889585748, guid: 7c51b7a159a324968977a4554ccc6db0, type: 3}
+      propertyPath: TimeLeft
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243280607889585748, guid: 7c51b7a159a324968977a4554ccc6db0, type: 3}
       propertyPath: TimerText
       value: 
       objectReference: {fileID: 1635985097}
@@ -1294,6 +1298,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 918303e64e4a74eb6b8f61ada687e377, type: 3}
     - target: {fileID: -1145377564759281648, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
+      propertyPath: FoodCount
+      value: 
+      objectReference: {fileID: 778672304}
+    - target: {fileID: -1145377564759281648, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
+      propertyPath: TimerText
+      value: 
+      objectReference: {fileID: 778672304}
+    - target: {fileID: -1145377564759281648, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
       propertyPath: ballCamera
       value: 
       objectReference: {fileID: 501853730}
@@ -1307,15 +1319,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6924680676179047964, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.42
+      value: 19.85
       objectReference: {fileID: 0}
     - target: {fileID: 6924680676179047964, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -44.66
+      value: 2.29
       objectReference: {fileID: 0}
     - target: {fileID: 6924680676179047964, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -68.34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6924680676179047964, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1352,7 +1364,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -1145377564759281648, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
   m_PrefabInstance: {fileID: 446478777}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 997342766}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f833489bcc764467bbe452c3ed3e7792, type: 3}
@@ -1537,6 +1549,7 @@ MonoBehaviour:
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 0
+  distance: 2
   minPitch: -80
   maxPitch: 80
   rotationSpeed: 300
@@ -1969,7 +1982,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.58
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -2022,7 +2035,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &661411401
 GameObject:
@@ -2208,8 +2221,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clock UI
       objectReference: {fileID: 0}
+    - target: {fileID: 2765774693318389410, guid: e66a0d08ecd4d4fe7807b78b5b048b6b, type: 3}
+      propertyPath: m_Text
+      value: ' 0 / 65'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e66a0d08ecd4d4fe7807b78b5b048b6b, type: 3}
+--- !u!114 &778672304 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2765774693318389410, guid: e66a0d08ecd4d4fe7807b78b5b048b6b, type: 3}
+  m_PrefabInstance: {fileID: 734850449}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &790504438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3058,6 +3086,107 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b630124cd374565a516a705649a421, type: 3}
+--- !u!1 &997342766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4399730250591210461, guid: 88db8e5998b434fe1bcda059256e0720, type: 3}
+  m_PrefabInstance: {fileID: 446478777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &997342771
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997342766}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1008974381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3343,7 +3472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3554067274238154476, guid: bc7c13506f15f42e8b689903722809a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.4622993
+      value: -4.332
       objectReference: {fileID: 0}
     - target: {fileID: 3554067274238154476, guid: bc7c13506f15f42e8b689903722809a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5457,7 +5586,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 305038809}
         m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6292,7 +6421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1096632795228200081, guid: 28b630124cd374565a516a705649a421, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1096632795228200081, guid: 28b630124cd374565a516a705649a421, type: 3}
       propertyPath: m_LocalPosition.x

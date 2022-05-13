@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TutorialBallRoller : MonoBehaviour
 {
@@ -12,14 +13,10 @@ public class TutorialBallRoller : MonoBehaviour
 
     public Transform ballCamera;
 
-    public Text TimerText;
+    public Text FoodCount;
 
     public AudioClip eatsound;
-
     private AudioSource audioSource;
-
-    public int finalCount;
-    public int highScore;
 
     void Start()
     {
@@ -70,28 +67,16 @@ public class TutorialBallRoller : MonoBehaviour
         Destroy(food);
         audioSource.PlayOneShot(eatsound);
         counter++;
-        TimerText.text = string.Format("{0} / 40", counter);
+        FoodCount.text = string.Format("{0} / 40", counter);
         if (counter == 5 || counter == 20 || counter == 30)
         {
             transform.localScale *= 1.5f;
             acceleration -= 0.1f;
         }
-
-    }
-
-    public void FinalCount()
-    {
-        finalCount = counter;
-        PlayerPrefs.GetInt("Score", finalCount);
-    }
-
-    public void UpdateHighScore()
-    {
-        if (counter >= highScore)
+        if (counter == 40)
         {
-            highScore = counter;
-            PlayerPrefs.GetInt("HighScore", highScore);
+            SceneManager.LoadScene(7);
         }
-    }
 
+    }
 }
